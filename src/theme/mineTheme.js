@@ -1,0 +1,8 @@
+export const theme = {
+  background: 'hsl(40, 23%, 92%)',
+  siedbar: 'hsl(192, 12%, 23%)',
+  backgroundSection: 'hsl(196, 12%, 18%)',
+  textColor: 'hsl(197, 12%, 39%)',
+  textColorSecondary: 'hsl(358, 95%, 62%)',
+  additionalColor: 'hsl(197, 12%, 23%)',
+};
