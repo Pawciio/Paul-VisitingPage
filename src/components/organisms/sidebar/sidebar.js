@@ -7,6 +7,8 @@ import Register from '../../atoms/register/register';
 const Background = styled.div`
   background: ${({ theme }) => theme.additionalColor};
   max-width: 450px;
+  float: left;
+  height: 100vh;
 `;
 
 const WrapperGroup = styled.div`
