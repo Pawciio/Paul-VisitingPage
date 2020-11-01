@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Heading from '../../atoms/heading/heading';
 import Pharagraph from '../../atoms/pharagraph/pharagraph';
+import SocialMedia from '../../molecules/linksSocialMedia/linksSocialMedia';
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,6 +11,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
   justify-content: center;
+  align-self: flex-end;
 
   h1 {
     text-transform: uppercase;
@@ -32,6 +34,7 @@ const Jumbo = () => (
       Pretty Woman is a hair salon in New York. This page is supposed to provide info about our
       salon, offer and already made hairstyles, as well as transformations.
     </Pharagraph>
+    <SocialMedia />
   </Wrapper>
 );
 
