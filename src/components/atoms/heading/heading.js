@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components';
 
 const Heading = styled.h2`
   font-size: 36px;
-  /* margin: 0 0 20px 0; */
-  color: ${({ theme, aboutUs }) => (aboutUs ? theme.textColorSecondary : null)};
+  text-transform: ${({ upper }) => (upper ? 'uppercase' : null)};
+  color: ${({ theme, head }) => (head ? theme.textColorSecondary : null)};
 
   ${({ secondary }) =>
     secondary &&

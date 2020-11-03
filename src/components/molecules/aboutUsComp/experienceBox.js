@@ -55,12 +55,12 @@ const ExperienceBox = () => {
 
   return (
     <WrapperExperienceBox>
-      <Heading aboutUs>Experience</Heading>
+      <Heading head>Experience</Heading>
       {Items.map((item) => (
         <>
           <WrapperAddicional>
             <Circle />
-            <Heading aboutUs secondary>
+            <Heading head secondary>
               {item.date}
             </Heading>
           </WrapperAddicional>

@@ -37,7 +37,7 @@ const AboutUsBox = () => {
 
   return (
     <Wrapper>
-      <Heading aboutUs>About us</Heading>
+      <Heading head>About us</Heading>
       {Items.map((item) => (
         <>
           {item.bold ? (
