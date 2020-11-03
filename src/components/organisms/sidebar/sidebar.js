@@ -7,8 +7,8 @@ import Register from '../../atoms/register/register';
 const Background = styled.div`
   background: ${({ theme }) => theme.additionalColor};
   max-width: 450px;
-  float: left;
   height: 100vh;
+  position: fixed;
 `;
 
 const WrapperGroup = styled.div`
@@ -19,33 +19,41 @@ const WrapperItem = styled.div`
   padding: 10px 10px;
 `;
 
-const Sidebar = () => (
-  <Background>
-    <WrapperGroup>
-      <WrapperItem>
-        <Register />
-      </WrapperItem>
-      <WrapperItem>
-        <Pharagraph upper>owner</Pharagraph>
-        <Pharagraph white>Madlene Page</Pharagraph>
-      </WrapperItem>
-      <WrapperItem>
-        <Pharagraph upper>location</Pharagraph>
-        <Pharagraph white>
-          Gwardia St. 45 <br />
-          New York
-        </Pharagraph>
-      </WrapperItem>
-      <WrapperItem>
-        <Pharagraph upper>phone number</Pharagraph>
-        <Pharagraph white>+48 594 672 669</Pharagraph>
-      </WrapperItem>
-      <WrapperItem>
-        <Pharagraph upper>email</Pharagraph>
-        <Pharagraph white>prettywoman@gmail.com</Pharagraph>
-      </WrapperItem>
-    </WrapperGroup>
-  </Background>
-);
+const Sidebar = () => {
+  const Items = [
+    {
+      heading: 'owner',
+      description: 'Madlene Page',
+    },
+    {
+      heading: 'phone number',
+      description: '+48 594 672 669',
+    },
+    {
+      heading: 'email',
+      description: 'prettywoman@gmail.com',
+    },
+    {
+      heading: 'location',
+      description: 'Gwardia St. 45 New York',
+    },
+  ];
+
+  return (
+    <Background>
+      <WrapperGroup>
+        <WrapperItem>
+          <Register />
+        </WrapperItem>
+        {Items.map((item) => (
+          <WrapperItem>
+            <Pharagraph upper>{item.heading}</Pharagraph>
+            <Pharagraph white>{item.description}</Pharagraph>
+          </WrapperItem>
+        ))}
+      </WrapperGroup>
+    </Background>
+  );
+};
 
 export default Sidebar;

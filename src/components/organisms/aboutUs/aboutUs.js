@@ -9,6 +9,7 @@ const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.backgroundAboutUs};
   display: flex;
   justify-content: space-between;
+  margin-left: 333px;
 `;
 
 // const Boxs = styled.div`

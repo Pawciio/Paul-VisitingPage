@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   background: ${({ theme }) => theme.white};
   display: flex;
   justify-content: space-between;
+  margin-left: 333px;
   img {
     max-width: 500px;
   }
