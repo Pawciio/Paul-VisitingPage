@@ -6,6 +6,7 @@ import Pharagraph from '../../atoms/pharagraph/pharagraph';
 import SocialMedia from '../../molecules/linksSocialMedia/linksSocialMedia';
 
 const Wrapper = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -24,12 +25,16 @@ const Wrapper = styled.div`
     max-width: 570px;
     margin: 10px;
   }
+
+  .test {
+    color: ${({ theme }) => theme.additionalColor};
+  }
 `;
 
 const Jumbo = () => (
   <Wrapper>
     <h1>Pretty woman</h1>
-    <Heading>Hair salon</Heading>
+    <Heading className="test">Hair salon</Heading>
     <Pharagraph secondary>
       Pretty Woman is a hair salon in New York. This page is supposed to provide info about our
       salon, offer and already made hairstyles, as well as transformations.
