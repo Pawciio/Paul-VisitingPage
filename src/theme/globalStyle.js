@@ -17,6 +17,7 @@ body{
     font-size: 1.6rem;
     margin: 0;
     max-width: 1920px;
+    background: hsl(192, 12%, 23%);
 }
 
 a{

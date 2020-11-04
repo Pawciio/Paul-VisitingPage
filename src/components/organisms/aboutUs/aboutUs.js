@@ -5,10 +5,9 @@ import AboutUsBox from '../../molecules/aboutUsComp/aboutUsBox';
 import ExperienceBox from '../../molecules/aboutUsComp/experienceBox';
 
 const Wrapper = styled.section`
-  height: 1000px;
   background-color: ${({ theme }) => theme.backgroundAboutUs};
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin-left: 333px;
 `;
 

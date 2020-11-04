@@ -5,5 +5,6 @@ export const theme = {
   backgroundServices: 'hsl(196, 12%, 18%)',
   textColor: 'hsl(197, 12%, 39%)',
   textColorSecondary: 'hsl(358, 95%, 62%)',
+  imageGalleryHover: 'hsl(358, 95%, 62%, .9)',
   additionalColor: 'hsl(197, 12%, 23%)',
 };

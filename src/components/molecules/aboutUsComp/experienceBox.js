@@ -10,7 +10,7 @@ const WrapperExperienceBox = styled.div`
   padding: 100px 100px 100px 0;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  max-width: 50%;
 
   .space {
     width: 70%;
