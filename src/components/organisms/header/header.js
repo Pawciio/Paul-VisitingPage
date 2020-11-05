@@ -12,6 +12,10 @@ const Wrapper = styled.div`
   img {
     max-width: 500px;
   }
+
+  @media (max-width: 1310px) {
+    margin-left: 20px;
+  }
 `;
 
 const Header = () => (

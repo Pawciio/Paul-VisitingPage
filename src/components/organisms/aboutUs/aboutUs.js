@@ -9,6 +9,10 @@ const Wrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   margin-left: 333px;
+
+  @media (max-width: 1310px) {
+    margin-left: 20px;
+  }
 `;
 
 // const Boxs = styled.div`

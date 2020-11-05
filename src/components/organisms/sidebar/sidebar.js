@@ -1,25 +1,52 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import Pharagraph from '../../atoms/pharagraph/pharagraph';
 import Register from '../../atoms/register/register';
+
+const leftEnter = keyframes`
+  from {
+    left: -50px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+`;
 
 const Background = styled.div`
   background: ${({ theme }) => theme.additionalColor};
   max-width: 450px;
   height: 100vh;
   position: fixed;
+
+  @media (max-width: 1310px) {
+    padding: 3rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+    width: ${({ open }) => (open ? '300px' : '40px')};
+  }
 `;
 
 const WrapperGroup = styled.div`
   padding: 30px 50px;
+
+  @media (max-width: 1310px) {
+    position: absolute;
+    animation: ${leftEnter} 0.5s ease-in-out;
+    display: ${({ open }) => (open ? 'block' : 'none')};
+  }
 `;
 
 const WrapperItem = styled.div`
   padding: 10px 10px;
 `;
 
-const Sidebar = () => {
+const Sidebar = ({ open }) => {
   const Items = [
     {
       heading: 'owner',
@@ -40,8 +67,8 @@ const Sidebar = () => {
   ];
 
   return (
-    <Background>
-      <WrapperGroup>
+    <Background open={open}>
+      <WrapperGroup open={open}>
         <WrapperItem>
           <Register />
         </WrapperItem>

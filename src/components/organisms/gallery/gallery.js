@@ -8,6 +8,10 @@ const Wrapper = styled.section`
   padding: 50px;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1310px) {
+    margin-left: 20px;
+  }
 `;
 
 const Gallery = () => {

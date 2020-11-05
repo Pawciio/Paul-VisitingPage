@@ -11,6 +11,10 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 1310px) {
+    margin-left: 20px;
+  }
 `;
 
 const Services = () => (
