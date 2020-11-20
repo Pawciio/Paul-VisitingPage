@@ -50,43 +50,51 @@ const WrapperItem = styled.div`
 
 class GalleryImage extends React.Component {
   state = {
-    showPopup: false,
     Items: [
       {
+        id: 1,
         image: Image1,
         description: 'Soft Blonde colourization',
       },
       {
+        id: 2,
         image: Image2,
         description: 'Soft Blonde colourization',
       },
       {
+        id: 3,
         image: Image3,
         description: 'Soft Blonde colourization',
       },
       {
+        id: 4,
         image: Image4,
         description: 'Soft Blonde colourization',
       },
       {
+        id: 5,
         image: Image5,
         description: 'Soft Blonde colourization',
       },
       {
+        id: 6,
         image: Image6,
         description: 'Soft Blonde colourization',
       },
     ],
   };
 
-  handleBoxToogle = () => this.setState({ showPopup: !this.state.showPopup });
+  handleBoxToggle = (x) => x.classList.toggle('visible');
 
-  handleBoxTrue = () => this.setState({ showPopup: true });
-  handleBoxFalse = () => this.setState({ showPopup: false });
+  closestElShoe = (e) => {
+    let imagex = e.target.closest('div');
+    const x = imagex.querySelector('.popup');
+    this.handleBoxToggle(x);
+  };
 
-  closestEl = () => {
-    const test = document.querySelectorAll('.popup');
-    console.log(test.closest('img'));
+  closestElx = (e) => {
+    let popup = e.target.closest('.popup');
+    this.handleBoxToggle(popup);
   };
 
   render() {
@@ -94,16 +102,12 @@ class GalleryImage extends React.Component {
       <Wrapper>
         {this.state.Items.map((item) => (
           <WrapperItem>
-            <div
-              onMouseMove={this.handleBoxTrue}
-              onMouseLeave={this.handleBoxFalse}
-              className={`popup ${this.state.showPopup ? 'visible' : ''}`}
-            >
+            <div key={item.id} onMouseLeave={this.closestElx} className={`popup`}>
               <Pharagraph white className="popup-text">
                 {item.description}
               </Pharagraph>
             </div>
-            <img src={item.image} alt="ImageHair" onMouseMove={this.handleBoxToogle} />
+            <img src={item.image} alt="ImageHair" onMouseEnter={this.closestEl} />
           </WrapperItem>
         ))}
       </Wrapper>

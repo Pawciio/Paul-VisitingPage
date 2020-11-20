@@ -28,7 +28,7 @@ const Background = styled.div`
     top: 0;
     left: 0;
     transition: 0.3s ease-in-out;
-    width: ${({ open }) => (open ? '300px' : '40px')};
+    width: ${({ open }) => (open ? '300px' : '20px')};
   }
 `;
 

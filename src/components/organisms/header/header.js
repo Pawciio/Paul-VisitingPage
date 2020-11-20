@@ -9,12 +9,23 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-left: 333px;
+
   img {
     max-width: 500px;
   }
 
   @media (max-width: 1310px) {
     margin-left: 20px;
+  }
+
+  @media (max-width: 970px) {
+    background-image: url(../../../assets/header.png);
+    background: none;
+    padding: 40px 0;
+
+    img {
+      display: none;
+    }
   }
 `;
 
