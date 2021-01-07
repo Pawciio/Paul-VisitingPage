@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import AdderImageGallery from '../../atoms/addImagerGalery/addImagerGalery';
 import Pharagraph from '../../atoms/pharagraph/pharagraph';
 import Image1 from '../../../assets/galleryImage/image1.png';
 import Image2 from '../../../assets/galleryImage/image2.png';
@@ -27,24 +27,34 @@ const WrapperItem = styled.div`
   }
 
   .popup {
-    width: 250px;
-    height: 298px;
-    background: red;
     opacity: 0.8;
-    position: absolute;
-    display: flex;
-    align-items: flex-end;
-    visibility: hidden;
-    z-index: 2;
-
-    .popup-text {
-      letter-spacing: 1px;
-      font-size: 20px;
-      margin: 8px;
-    }
+    position: relative;
   }
-  .visible {
-    visibility: visible;
+
+  .popup::before {
+    content: '';
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+  }
+
+  .popupText {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+  }
+  .dispBlock {
+    display: block;
+  }
+
+  .Image {
+    width: 280px;
+    height: 330px;
+    position: relative;
   }
 `;
 
@@ -84,17 +94,10 @@ class GalleryImage extends React.Component {
     ],
   };
 
-  handleBoxToggle = (x) => x.classList.toggle('visible');
-
-  closestElShoe = (e) => {
-    let imagex = e.target.closest('div');
-    const x = imagex.querySelector('.popup');
-    this.handleBoxToggle(x);
-  };
-
-  closestElx = (e) => {
-    let popup = e.target.closest('.popup');
-    this.handleBoxToggle(popup);
+  togglePopup = (e) => {
+    e.target.closest('.Image').classList.toggle('popup');
+    const popupText = e.target.closest('.Image').querySelector('.popupText');
+    popupText.classList.toggle('dispBlock');
   };
 
   render() {
@@ -102,12 +105,17 @@ class GalleryImage extends React.Component {
       <Wrapper>
         {this.state.Items.map((item) => (
           <WrapperItem>
-            <div key={item.id} onMouseLeave={this.closestElx} className={`popup`}>
-              <Pharagraph white className="popup-text">
-                {item.description}
-              </Pharagraph>
-            </div>
-            <img src={item.image} alt="ImageHair" onMouseEnter={this.closestEl} />
+            <AdderImageGallery
+              className="Image"
+              key={item.key}
+              icons={item.image}
+              onMouseEnter={this.togglePopup}
+              onMouseLeave={this.togglePopup}
+            >
+              <div className="popupText">
+                <Pharagraph white>{item.description}</Pharagraph>
+              </div>
+            </AdderImageGallery>
           </WrapperItem>
         ))}
       </Wrapper>
