@@ -29,7 +29,7 @@ const Line = styled.div`
 
 const Register = () => (
   <Wrapper>
-    <p className='changeNumberSecton'><span>0</span>1</p>
+    <p className='changeNumberSecton'>01</p>
     <Line />
     <p className='staticNumberSection'>04</p>
   </Wrapper>

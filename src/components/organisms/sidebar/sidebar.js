@@ -55,6 +55,40 @@ const WrapperItem = styled.div`
 `;
 
 const Sidebar = ({ open }) => {
+
+  // TESTOWANE rozwiązanie ale działa
+  
+  window.addEventListener('scroll', () => {
+    // pobrana liczba z registera bazowa 1
+    let numberSection =  document.querySelector('.changeNumberSecton')
+    // pobrana lista sekcji z dokumentu
+    const sectionCollection = document.querySelectorAll('section')
+    // console.log(sectionCollection);
+
+    // dla 1 sekcji => 1 - 250px
+    if (window.scrollY < sectionCollection[0].scrollHeight - 250) {
+      numberSection.innerText = '01';
+    }
+    // dla 2 sekcji => 1 + 2 - 250px && scrollY jest większe od 1
+    if (window.scrollY < sectionCollection[0].scrollHeight + sectionCollection[1].scrollHeight  - 250 &&
+       window.scrollY > sectionCollection[0].scrollHeight ) {
+      numberSection.innerText = '02';
+    }
+    // dla 3 sekcji => 1 + 2 + 3 - 250px && scrollY jest większe od 1 + 2
+    if (window.scrollY < sectionCollection[0].scrollHeight + sectionCollection[1].scrollHeight + sectionCollection[2].scrollHeight  - 250 &&
+      window.scrollY > sectionCollection[0].scrollHeight + sectionCollection[1].scrollHeight) {
+     numberSection.innerText = '03';
+    }
+    // dla 4 sekcji => 1 + 2 + 3 + 4 - 250px && scrollY jest większe od 1 + 2 + 3
+    if (window.scrollY < sectionCollection[0].scrollHeight + sectionCollection[1].scrollHeight + sectionCollection[2].scrollHeight + 
+      sectionCollection[3].scrollHeight  - 250 && window.scrollY > sectionCollection[0].scrollHeight + 
+      sectionCollection[1].scrollHeight + sectionCollection[2].scrollHeight) {
+      numberSection.innerText = '04';
+    }
+  })
+
+  // KONIEC testowego rozwiązania
+
   const Items = [
     {
       heading: 'owner',

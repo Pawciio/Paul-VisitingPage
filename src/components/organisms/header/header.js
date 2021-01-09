@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Jumbo from '../../molecules/jumbo/jumbo';
 import Image from '../../../assets/header.png';
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   background: ${({ theme }) => theme.white};
   display: flex;
 
