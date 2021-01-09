@@ -5,6 +5,8 @@ const Wrapper = styled.div`
   background: ${({ theme }) => theme.textColorSecondary};
   display: flex;
   margin-top: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
   align-self: stretch;
 
   a {
@@ -19,6 +21,7 @@ const Wrapper = styled.div`
     color: ${({ theme }) => theme.additionalColor};
     transition: 0.4s ease-in-out;
   }
+
 `;
 
 const SocialMedia = () => {

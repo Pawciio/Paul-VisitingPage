@@ -19,22 +19,33 @@ const Wrapper = styled.div`
     font-size: 50px;
     color: ${({ theme }) => theme.textColorSecondary};
     margin: 0;
+    text-align: center;
   }
 
   p {
     max-width: 570px;
     margin: 10px;
+    text-align: center;
   }
 
-  .test {
+  .titleName {
     color: ${({ theme }) => theme.additionalColor};
+  }
+
+  @media all and (max-width: 970px) {
+      .titleName {
+      color: ${({ theme }) => theme.white};
+    }
+      p{
+        color: ${({ theme }) => theme.white};
+    }
   }
 `;
 
 const Jumbo = () => (
   <Wrapper>
     <h1>Pretty woman</h1>
-    <Heading className="test">Hair salon</Heading>
+    <Heading className="titleName">Hair salon</Heading>
     <Pharagraph secondary>
       Pretty Woman is a hair salon in New York. This page is supposed to provide info about our
       salon, offer and already made hairstyles, as well as transformations.

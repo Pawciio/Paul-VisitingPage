@@ -56,6 +56,10 @@ const WrapperItem = styled.div`
     height: 330px;
     position: relative;
   }
+
+  @media all and (max-width: 500px) {
+    margin: 15px 2px;
+  }
 `;
 
 class GalleryImage extends React.Component {

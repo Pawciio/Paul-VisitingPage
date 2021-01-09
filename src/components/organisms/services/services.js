@@ -15,6 +15,9 @@ const Wrapper = styled.section`
   @media (max-width: 1310px) {
     margin-left: 20px;
   }
+  @media all and (max-width: 500px) {
+    padding: 5px;
+  }
 `;
 
 const Services = () => (

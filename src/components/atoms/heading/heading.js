@@ -8,8 +8,9 @@ const Heading = styled.h2`
   ${({ secondary }) =>
     secondary &&
     css`
-      font-size: 24px;
+      font-size: 23px;
       font-weight: lighter;
+      text-align: center;
     `};
 `;
 

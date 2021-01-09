@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   @media (max-width: 970px) {
     background-image: url(../../../assets/header.png);
     background: none;
-    padding: 40px 0;
+    padding-top: 30px;
 
     img {
       display: none;

@@ -12,8 +12,22 @@ const WrapperExperienceBox = styled.div`
   flex-direction: column;
   max-width: 50%;
 
+  h2{
+    text-align: center;
+  }
+
   .space {
     width: 70%;
+  }
+  @media all and (max-width: 1000px) {
+    padding: 25px;
+  }
+  @media all and (max-width: 750px) {
+    margin: 0 auto;
+    max-width: 70%;
+  }
+  @media all and (max-width: 500px) {
+    max-width: 100%;
   }
 `;
 
@@ -23,7 +37,6 @@ const SpaceBox = styled.div`
 
 const WrapperAddicional = styled.div`
   display: flex;
-  align-items: center;
 `;
 
 const ExperienceBox = () => {

@@ -14,6 +14,13 @@ const Wrapper = styled.div`
   .space {
     padding: 10px;
   }
+
+  @media all and (max-width: 1000px) {
+    padding: 25px;
+  }
+  @media all and (max-width: 750px) {
+    max-width: 100%;
+  }
 `;
 
 const AboutUsBox = () => {

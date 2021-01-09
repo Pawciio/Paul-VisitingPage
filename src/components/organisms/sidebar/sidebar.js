@@ -21,6 +21,7 @@ const Background = styled.div`
   max-width: 450px;
   height: 100vh;
   position: fixed;
+  z-index: 2;
 
   @media (max-width: 1310px) {
     padding: 3rem 0;

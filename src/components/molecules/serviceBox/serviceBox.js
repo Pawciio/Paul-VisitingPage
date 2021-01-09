@@ -36,6 +36,10 @@ const WrapperItem = styled.div`
     width: 120px;
     height: 120px;
   }
+
+  @media all and (max-width: 500px) {
+    margin: 15px 5px;
+  }
 `;
 
 const ServiceBox = () => {
