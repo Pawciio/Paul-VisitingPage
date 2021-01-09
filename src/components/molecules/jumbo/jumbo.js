@@ -6,10 +6,13 @@ import Pharagraph from '../../atoms/pharagraph/pharagraph';
 import SocialMedia from '../../molecules/linksSocialMedia/linksSocialMedia';
 
 const Wrapper = styled.div`
+
+// ehh nwm czemu nie działa 
   /* @font-face {
     font-family: 'kaushan-script';
     src: url('../../../assets/Fonts/KaushanScript-Regular.ttf');
 } */
+
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
   display: flex;

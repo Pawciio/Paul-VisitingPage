@@ -19,7 +19,7 @@ const leftEnter = keyframes`
 
 const Background = styled.div`
   background: ${({ theme }) => theme.additionalColor};
-  max-width: 450px;
+  max-width: 300px;
   height: 100vh;
   position: fixed;
   z-index: 2;
