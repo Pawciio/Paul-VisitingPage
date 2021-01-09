@@ -10,6 +10,14 @@ const Wrapper = styled.div`
     font-size: 26px;
     font-weight: bolder;
   }
+
+  .changeNumberSecton{
+    color: ${({ theme }) => theme.textColorSecondary};
+  }
+
+  .staticNumberSection{
+    color: ${({ theme }) => theme.white};
+  }
 `;
 
 const Line = styled.div`
@@ -21,9 +29,9 @@ const Line = styled.div`
 
 const Register = () => (
   <Wrapper>
-    <p>01</p>
+    <p className='changeNumberSecton'><span>0</span>1</p>
     <Line />
-    <p>04</p>
+    <p className='staticNumberSection'>04</p>
   </Wrapper>
 );
 
