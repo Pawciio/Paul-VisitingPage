@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import AdderImageGallery from '../../atoms/addImagerGalery/addImagerGalery';
+import AdderImage from '../../atoms/addImager/addImager';
 import Pharagraph from '../../atoms/pharagraph/pharagraph';
 import Image1 from '../../../assets/galleryImage/image1.png';
 import Image2 from '../../../assets/galleryImage/image2.png';
@@ -109,7 +109,7 @@ class GalleryImage extends React.Component {
       <Wrapper>
         {this.state.Items.map((item) => (
           <WrapperItem>
-            <AdderImageGallery
+            <AdderImage
               className="Image"
               key={item.key}
               icons={item.image}
@@ -119,7 +119,7 @@ class GalleryImage extends React.Component {
               <div className="popupText">
                 <Pharagraph white>{item.description}</Pharagraph>
               </div>
-            </AdderImageGallery>
+            </AdderImage>
           </WrapperItem>
         ))}
       </Wrapper>

@@ -15,10 +15,6 @@ const Wrapper = styled.section`
   }
 `;
 
-// const Boxs = styled.div`
-//   background-color: teal;
-// `;
-
 const AboutUs = () => (
   <Wrapper>
     <AboutUsBox />

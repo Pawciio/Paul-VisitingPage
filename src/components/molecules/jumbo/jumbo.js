@@ -6,7 +6,12 @@ import Pharagraph from '../../atoms/pharagraph/pharagraph';
 import SocialMedia from '../../molecules/linksSocialMedia/linksSocialMedia';
 
 const Wrapper = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+  /* @font-face {
+    font-family: 'kaushan-script';
+    src: url('../../../assets/Fonts/KaushanScript-Regular.ttf');
+} */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -29,6 +34,7 @@ const Wrapper = styled.div`
   }
 
   .titleName {
+    font-family: 'Kaushan Script';
     color: ${({ theme }) => theme.additionalColor};
   }
 

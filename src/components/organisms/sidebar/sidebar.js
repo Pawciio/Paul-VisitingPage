@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 
 import Pharagraph from '../../atoms/pharagraph/pharagraph';
 import Register from '../../atoms/register/register';
+import madlenePage from '../../../assets/MadlenePageImage.png'
 
 const leftEnter = keyframes`
   from {
@@ -40,6 +41,12 @@ const WrapperGroup = styled.div`
     position: absolute;
     animation: ${leftEnter} 0.5s ease-in-out;
     display: ${({ open }) => (open ? 'block' : 'none')};
+  }
+
+  .signature{
+    transform: scale(0.5);
+    position: relative;
+    left: -40px;
   }
 `;
 
@@ -79,6 +86,7 @@ const Sidebar = ({ open }) => {
             <Pharagraph white>{item.description}</Pharagraph>
           </WrapperItem>
         ))}
+        <img className='signature' src={madlenePage} alt='signature' /> 
       </WrapperGroup>
     </Background>
   );
